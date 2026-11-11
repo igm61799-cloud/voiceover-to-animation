@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>The Bell Ringers</title>
+<style>
+html,body{margin:0;height:100%;background:#07080f;overflow:hidden}
+#c{display:block;width:100vw;height:100vh;object-fit:contain}
+#play{position:fixed;inset:0;display:none;align-items:center;justify-content:center;cursor:pointer}
+#play div{width:0;height:0;border-left:70px solid #f3e8d0;border-top:44px solid transparent;border-bottom:44px solid transparent;opacity:.9}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="rough0" x="0" y="0" width="1920" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="3" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="rough1" x="0" y="0" width="1920" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="rough2" x="0" y="0" width="1920" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>
+</svg>
+<canvas id="c" width="1920" height="1080"></canvas>
+<div id="play"><div></div></div>
+<audio id="vo" src="../voiceover.mp3" preload="auto"></audio>
+<script src="core.js"></script>
+<script src="s1.js"></script>
+<script src="s2.js"></script>
+<script src="s3.js"></script>
+<script src="s4.js"></script>
+<script src="s5.js"></script>
+<script src="main.js"></script>
+</body></html>
